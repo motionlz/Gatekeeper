@@ -27,6 +27,13 @@ public class MeleeWeapon : MonoBehaviour
             col.enabled = true;
             Tr.enabled = true;
         }
+        else if (Input.GetMouseButton(0))
+        {
+            var mouse = Input.mousePosition;
+            Melee.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(mouse).x, Camera.main.ScreenToWorldPoint(mouse).y, 0);
+            col.enabled = true;
+            Tr.enabled = true;
+        }
         else
         {
             col.enabled = false;

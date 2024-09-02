@@ -42,6 +42,19 @@ public class GunFire : MonoBehaviour
                 }
             }
         }
+        else if (Input.mousePresent)
+        {
+            var aimPoint = Input.mousePosition;
+            Gun.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(aimPoint).x, Camera.main.ScreenToWorldPoint(aimPoint).y + 0.05f, 0);
+            if (Input.GetMouseButton(0) && cooldown <= 0 && !reload)
+            {
+                if (Ammo > 0)
+                {
+                    Fire();
+                }
+            }
+        }
+
         if (Input.touchCount != 2)
             reload = false;
 

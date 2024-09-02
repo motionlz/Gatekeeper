@@ -31,8 +31,8 @@ public class AdsManager : MonoBehaviour
 
     public void showRewardads()
     {
-        var result = new ShowOptions { resultCallback = OnUnityAdsDidFinish };
-        Advertisement.Show(placementId3, result);
+        //var result = new ShowOptions { resultCallback = OnUnityAdsDidFinish };
+        //Advertisement.Show(placementId3, result);
     }
 
     public void OnUnityAdsDidFinish(ShowResult showResult)
